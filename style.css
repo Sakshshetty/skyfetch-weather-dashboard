@@ -1,0 +1,115 @@
+/* ===== BODY & CONTAINER ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    padding-top: 80px;
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ===== SEARCH SECTION ===== */
+.search-section {
+    margin-bottom: 20px;
+}
+
+#cityInput {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+#cityInput:focus {
+    outline: 2px solid white;
+}
+
+#searchBtn {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    color: #2575fc;
+    cursor: pointer;
+}
+
+#searchBtn:hover {
+    background-color: #f1f1f1;
+}
+
+#searchBtn:disabled {
+    background-color: gray;
+    color: white;
+    cursor: not-allowed;
+}
+
+/* ===== CURRENT WEATHER CARD ===== */
+.current-weather-card {
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.current-weather-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.current-weather-card p {
+    text-transform: capitalize;
+}
+
+/* ===== FORECAST GRID ===== */
+#forecast-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.forecast-card {
+    background: rgba(255,255,255,0.2);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.forecast-card:hover {
+    transform: scale(1.05);
+}
+
+.forecast-card img {
+    width: 60px;
+}
+
+.forecast-card p {
+    text-transform: capitalize;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+    #cityInput, #searchBtn {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    #forecast-container {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .forecast-card img {
+        width: 50px;
+    }
+}
