@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkyFetch Weather Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="container">
         <h1>SkyFetch</h1>
 
@@ -16,16 +16,19 @@
             <button id="searchBtn">Search</button>
         </div>
 
+        <!-- Recent Searches -->
+        <div id="recent-searches"></div>
+
         <!-- Current Weather -->
-        <div id="weather-card" class="current-weather-card">
+        <div id="weather-card">
             <h2 id="city"></h2>
             <p id="temperature"></p>
             <p id="description"></p>
-            <img id="icon" alt="Weather Icon"/>
+            <img id="icon" />
         </div>
 
         <!-- 5-Day Forecast -->
-        <div id="forecast-container" class="forecast-grid"></div>
+        <div id="forecast-container"></div>
     </div>
 
     <!-- Axios CDN -->
