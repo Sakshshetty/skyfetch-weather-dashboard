@@ -1,102 +1,57 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    color: white;
-    text-align: center;
+  text-align: center;
+  font-family: Arial;
+  background: linear-gradient(to right, purple, blue);
+  color: white;
+  padding: 40px;
 }
 
 .container {
-    padding-top: 80px;
-    width: 90%;
-    max-width: 900px;
-    margin: auto;
+  max-width: 500px;
+  margin: auto;
 }
 
-/* SEARCH SECTION */
-.search-section {
-    margin-bottom: 10px;
+.search-box {
+  margin-bottom: 20px;
 }
 
 #cityInput {
-    padding: 8px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: none;
+  padding: 10px;
+  width: 65%;
+  border-radius: 5px;
+  border: none;
 }
 
 #cityInput:focus {
-    outline: 2px solid white;
+  outline: 2px solid yellow;
 }
 
 #searchBtn {
-    padding: 8px 12px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: none;
-    background-color: white;
-    color: #2575fc;
-    cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
 }
 
 #searchBtn:hover {
-    background-color: #f1f1f1;
+  background-color: yellow;
 }
 
-#searchBtn:disabled {
-    background-color: gray;
-    color: white;
-    cursor: not-allowed;
+.error {
+  color: red;
+  margin-top: 10px;
 }
 
-/* RECENT SEARCHES */
-#recent-searches {
-    margin-bottom: 20px;
+.spinner {
+  border: 4px solid #fff;
+  border-top: 4px solid yellow;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 20px auto;
+  animation: spin 1s linear infinite;
 }
 
-.recent-btn {
-    background-color: rgba(255,255,255,0.2);
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    margin: 2px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.recent-btn:hover {
-    background-color: rgba(255,255,255,0.4);
-}
-
-/* CURRENT WEATHER CARD */
-#weather-card {
-    background: rgba(255,255,255,0.2);
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-}
-
-/* FORECAST SECTION */
-#forecast-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.forecast-card {
-    background: rgba(255,255,255,0.2);
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.forecast-card:hover {
-    transform: scale(1.05);
-}
-
-.forecast-card img {
-    width: 60px;
+@keyframes spin {
+  100% { transform: rotate(360deg); }
 }
